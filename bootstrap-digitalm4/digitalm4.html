@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- css link -->
+    <link rel="stylesheet" href="css/digitalm4.css">
+<!-- font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital@1&family=Arimo:ital,wght@1,500&family=Roboto+Condensed&display=swap" rel="stylesheet">
+<!-- bootstrap link -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+<!-- font awesome link -->
+<script src="https://kit.fontawesome.com/e8e6eba5d5.js" crossorigin="anonymous"></script>
+<!-- js part -->
+<script type="text/javascript">
+function formData(){
+  var firstname = document.forms["userform"]["firstname"]
+  var lastname = document.forms["userform"]["lastname"]
+  var email = document.forms["userform"]["email"]
+  var phone = document.forms["userform"]["phone"]
+
+  if (firstname.value =="") {
+    window.alert("please enter first name")
+   firstname.focus();
+   return false;
+  }
+  if (lastname.value =="") {
+    window.alert("please enter last name")
+   lasstname.focus();
+   return false;
+  }
+  if (email.value =="") {
+    window.alert("please enter email id")
+   email.focus();
+   return false;
+  }
+  if (phone.value =="") {
+    window.alert("please enter phone number")
+   phone.focus();
+   return false;
+  }
+  return true;
+}
+</script>
+<!-- jquery link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- jquery code -->
+<script>
+$(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".navbar-fixed-top");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
+</script>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <section class="title">
+      <!-- <section class="container"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top fixed-top">
+  <a class="navbar-brand nav-heading" href="#">DigitalM4</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Live Demo
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Live Demo Blocks
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Avvvv</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <button class="btn btn-primary buy-button" type="submit">Buy Now</button>
+    </ul>
+  </div>
+</nav>
+</section>
+  <!-- </section> -->
+  <!-- banner part -->
+  <section class="banner">
+    <div class="banner-part">
+    <img class="banner-image" src="image/background.jpg" alt="banner image">
+    <div class="banner-content">
+      <div class="container">
+<h1 class="banner-heading">Connect your worlds</h1>
+<h2>Save your Money. Use products of our software company</h2>
+<button class="btn btn-primary purchase-button" type="submit">PURCHASE</button>
+  </div>
+  </div>
+  </div>
+  </section>
+<!-- card section -->
+<section class="card-section">
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-lg-6">
+      <div class="card-1" style="width: 18rem;">
+        <div class="card-body card-background">
+          <h2 class="card-title"><i class="fas fa-cogs"></i></h2>
+          <h2 class="card-subtitle mb-2">Perfect Event</h2>
+          <p class="card-text">Tincidunt arcu non sodales neque sodales ut.</p>
+        </div>
+          </div>
+      </div>
+      <div class="col-lg-6">
+    <div class="card-2" style="width: 18rem;">
+      <div class="card-body card-background-1">
+        <h2 class="card-title"><i class="fas fa-cloud-upload-alt"></i></h2>
+        <h2 class="card-subtitle mb-2">Every Detail Matter</h2>
+        <p class="card-text">Tincidunt arcu non sodales neque sodales ut.</p>
+      </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-6">
+      <h2 class="column-content">Leading Organizations</h2>
+      <h4 class="column-text">The full service we are offering is specifically designed to meet your business needs.</h4>
+      <p class="column-text-1">In hac habitasse platea dictumst. Cursus metus aliquam eleifend mi in nulla posuere. Tristique sollicitudin nibh sit amet. Quis blandit turpis cursus in hac habitasse platea dictumst.</p>
+      <p class="column-text-1">Mauris pharetra et ultrices neque ornare aenean. Etiam sit amet nisl purus in mollis. Dapibus ultrices in iaculis nunc sed augue lacus viverra. Placerat vestibulum lectus mauris ultrices eros in. Aliquam nulla facilisi cras fermentum. Euismod lacinia at quis risus sed vulputate.
+      </p>
+    </div>
+  </div>
+  <div class="row container">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+        <div class="card-3" style="width: 18rem;">
+          <div class="card-body card-background-column">
+            <h2 class="card-title"><i class="fas fa-vote-yea"></i></h2>
+            <h2 class="card-subtitle mb-2">Flawless Execution</h2>
+            <p class="card-text">Tincidunt arcu non sodales neque sodales ut.</p>
+          </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+        <div class="card-4" style="width: 18rem;">
+        <div class="card-body card-background-column-1">
+          <h2 class="card-title"><i class="fas fa-rocket"></i></h2>
+          <h2 class="card-subtitle mb-2">Remembered Always</h2>
+          <p class="card-text">Tincidunt arcu non sodales neque sodales ut.</p>
+        </div>
+          </div>
+        </div>
+        </div>
+      </div>
+</div>
+      </div>
+</section>
+<!-- company part -->
+<section class="company-section">
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <img class="company-image" src="image/m4.png" alt="demo image">
+    </div>
+<div class="col-lg-6">
+  <h5 class="company-heading">WHY CHOOSE US?</h5>
+  <h3 class="company-content">Why is Search Engine Optimization important for your business?</h3>
+  <p class="company-para">Fringilla phasellus faucibus scelerisque eleifend donec pretium. Dolor sit amet consectetur adipiscing. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida.</p>
+  <ul class="company-list">
+    <li>"Tortor aliquam nulla"</li>
+    <li>"Mattis molestie a iaculis"</li>
+    <li>"Cursus in hac habitasse"</li>
+<li>"Vulputate ut pharetra sit"</li>
+  </ul>
+</div>
+  </div>
+</div>
+</section>
+<!-- business working model part -->
+<section class="working-part container">
+<p class="working-heading">HOW IT WORKS</p>
+<h1 class="working-content">Find out everything you need to know about creating a business process model.</h1>
+<div class="row">
+  <div class="col-lg-8">
+   <a href="#">
+      <img src="" alt="">
+    </a>
+  </div>
+   <div class="col-lg-4">
+     <p class="working-para">Curabitur nec orci orci. Ut fringilla nisl quis consectetur ultrices. Morbi mattis nisl vitae fringilla volutpat. Ut molestie metus vitae imperdiet. Maecenas ornare ut lectus ac volutpat. Vestibulum erat massa finibus.</p>
+    <!-- <p><i class="fas fa-arrow-right"></i>Aenean eu leo quam ornare.</p>
+    <p><i class="fas fa-arrow-right"></i>Aenean eu leo quam ornare.</p>
+    <p><i class="fas fa-arrow-right"></i>Aenean eu leo quam ornare.</p>
+    <p><i class="fas fa-arrow-right"></i>Aenean eu leo quam ornare.</p> -->
+      <ul class="working-para-list">
+       <li class="working-list"><i class="fas fa-arrow-right"></i>Aenean eu leo quam ornare.</li>
+       <li class="working-list"><i class="fas fa-arrow-right"></i>Nullam quis risus eget mollis.</li>
+       <li class="working-list"><i class="fas fa-arrow-right"></i>Donec elit non mi porta gravida</li>
+       <li class="working-list"><i class="fas fa-arrow-right"></i>Fusce dapibus cursus commodo.</li>
+
+      </ul>
+    <button type="button" class="btn btn-primary working-button">MORE DETAILS</button>
+   </div>
+ </div>
+</section>
+<!--our work process -->
+<section class="work-process container">
+  <p class="work-process-heading">OUR WORK PROCESS</p>
+  <h1 class="work-process-content">The process steps on creating our awesome and beautiful projects.</h1>
+  <div class="row">
+<div class="col-lg-8">
+  <img class="work-process-photo" src="image/img.png" alt="demo image">
+</div>
+<div class="col-lg-4">
+  <h4 class="process-column">Collect Ideas</h4>
+  <p class="process-para">Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+  <h4 class="process-column">Design Concept</h4>
+  <p class="process-para">Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+  <h4 class="process-column">Finalize Product</h4>
+  <p class="process-para">Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+</div>
+  </div>
+</section>
+<!-- company progress -->
+<section class="company-progress">
+<p class="progress-para">COMPANY PROGRESS</p>
+<div class="row">
+  <div class="container">
+    <div class="col-lg-3 progress-column">
+      <h1 class="company-progress-no">95%</h1>
+      <h4 class="progress-content">Search Engines</h4>
+      <p class="company-progress-para">Maecenas sed diam eget risus varius blandit sit amet.</p>
+    </div>
+    <div class="col-lg-3 progress-column">
+      <h1 class="company-progress-no">74%</h1>
+      <h4 class="progress-content">Referrals</h4>
+      <p class="company-progress-para">Maecenas sed diam eget risus varius blandit sit amet.</p>
+    </div>
+    <div class="col-lg-3 progress-column">
+      <h1 class="company-progress-no">48%</h1>
+      <h4 class="progress-content">Social Media</h4>
+      <p class="company-progress-para">Maecenas sed diam eget risus varius blandit sit amet.</p>
+    </div>
+    <div class="col-lg-3 progress-column">
+      <h1 class="company-progress-no">66%</h1>
+      <h4 class="progress-content">New Visitors</h4>
+      <p class="company-progress-para">Maecenas sed diam eget risus varius blandit sit amet.</p>
+    </div>
+  </div>
+</div>
+</section>
+<!-- planning part  -->
+<section class="planning-section">
+  <p class="planning-para">WHAT WE DO</p>
+  <h1 class="planning-content">We plan and build digital products for your business or project with high confidence</h1>
+  <div class="row">
+    <!-- <div class="container"> -->
+      <div class="col-lg-6">
+
+
+      </div>
+      <div class="col-lg-6">
+<img class="planning-image" src="image/13.png" alt="demo image">
+<h3 class="planning-line">Lorem ipsum dolor sit amet</h3>
+<p class="planning-line-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laudantium in adipisci ipsa optio quas id excepturi non, eos cupiditate, necessitatibus sapiente illo error. Vero adipisci quidem aut itaque labore.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- pricing tables -->
+<section class="pricing-section">
+  <p class="pricing-para">Pricing Tables</p>
+  <h1 class="pricing-heading">We offer great prices, premium products
+  <br>
+  and quality service for your business.
+</h1>
+<button type="button" class="btn btn-primary monthly-button">MONTHLY</button>
+<button type="button" class="btn btn-light yearly-button">YEARLY</button>
+  <div class="row">
+    <div class="container">
+
+    </div>
+<div class="col-lg-4">
+  <div class="card">
+    <div class="card-body">
+      <i class="fas fa-mobile-alt mobile-card"></i>
+      <h5 class="card-title-content">Startup</h5>
+      <p class="card-content-text">$ 11 / month</p>
+      <p class="card-content">1 Project</p>
+      <p class="card-content">100K API Access</p>
+      <p class="card-content">100MB Storage</p>
+      <p class="card-content">Custom Cloud Services</p>
+      <p class="card-content">Weekly Reports</p>
+      <p class="card-content-last">24/7Support</p>
+      <a href="#" class="btn btn-primary">GET STARTED</a>
+    </div>
+  </div>
+</div>
+<div class="col-lg-4">
+  <div class="card">
+    <div class="card-body">
+    <i class="fas fa-tv mobile-card"></i>
+      <h5 class="card-title-content">Corporate</h5>
+      <p class="card-content-text">$ 26 / month</p>
+      <p class="card-content">5 Project</p>
+      <p class="card-content">150K API Access</p>
+      <p class="card-content">20GB Storage</p>
+      <p class="card-content">Custom Cloud Services</p>
+      <p class="card-content">Weekly Reports</p>
+      <p class="card-content-last">24/7Support</p>
+      <a href="#" class="btn btn-primary">GET STARTED</a>
+    </div>
+  </div>
+</div>
+<div class="col-lg-4">
+  <div class="card">
+    <div class="card-body">
+    <i class="fas fa-tablet-alt mobile-card"></i>
+      <h5 class="card-title-content">Professional</h5>
+      <p class="card-content-text">$ 51 / month</p>
+      <p class="card-content">10 Project</p>
+      <p class="card-content">300K API Access</p>
+      <p class="card-content">100GB Storage</p>
+      <p class="card-content">Custom Cloud Services</p>
+      <p class="card-content">Weekly Reports</p>
+      <p class="card-content-last">24/7Support</p>
+      <a href="#" class="btn btn-primary">GET STARTED</a>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- sliding part -->
+<section class="sliding-section">
+  <div class="container">
+    <p class="sliding-part">OUR CLIENTS STORIES</p>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h3 class="sliding-heading">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus."</h3>
+      <img class="face-image" src="image/face1.jpg"  alt="face image">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="sliding-content">Thomas Allison</h5>
+        <p class="sliding-para">Manager</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <h3 class="sliding-heading">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus."</h3>
+      <img class="face-image" src="image/face2.jpg"  alt="face image">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="sliding-content">Joan Tucker</h5>
+        <p class="sliding-para">Sales Manager</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <h3 class="sliding-heading">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus."</h3>
+      <img class="face-image" src="image/face3.jpg"  alt="face image">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="sliding-content">Peter Beasley</h5>
+        <p class="sliding-para">Developer</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+  </div>
+
+</section>
+<!-- form part -->
+<section class="form-section">
+<p class="form-para">GET IN TOUCH</p>
+<h3 class="form-heading">Have any questions? Reach out to us from our
+<br>
+  contact form and we will get back to you shortly.</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img class="form-image" src="image/07.jpg" alt="form image">
+        </div>
+     <div class="col-lg-6">
+  <div class="row">
+<div class="col-lg-6">
+  <form class="" action="index.html" name="userform" method="post" onsubmit="return formData()">
+    <div class="form-group">
+      <input type="text" name="firstname"  value="" class="form-control input-content" id="exampleFormControlInput1" placeholder="First Name*">
+    </div>
+    <div class="form-group">
+      <input type="text" name="lastname"  value="" class="form-control input-content" id="exampleFormControlInput1" placeholder=" Email*">
+    </div>
+</form>
+</div>
+<div class="col-lg-6">
+  <form class="" action="index.html" name="userform" method="post" onsubmit="return formData()">
+    <div class="form-group">
+      <input type="text" name="email" value="" class="form-control input-content" id="exampleFormControlInput1" placeholder="Last Name*">
+    </div>
+    <form>
+      <div class="form-group">
+        <input type="text" name="phone"  value="" class="form-control input-content" id="exampleFormControlInput1" placeholder="Phone*">
+      </div>
+      </form>
+      </div>
+</div>
+  <form>
+  <div class="form-group">
+      <textarea class="form-control input-content" id="exampleFormControlTextarea1" placeholder="Message*" rows="3"> </textarea>
+    </div>
+  </form>
+  <input class="btn btn-primary message-button"  value="send message" type="submit">
+  <br>
+    <p class="required-field">* These fields are required.</p>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- map part -->
+<div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20GraftMobirise%20St.%2010/15%20Dark%20City,%20NY,%20USAon%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm">Plan A Journey</a></div>
+<!--footer part -->
+<section class="footer-section">
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2 class="footer-heading-1">DigitalM4</h2>
+      <!-- <ul> -->
+        <!-- <li class="footer-list"> -->
+          <h5 class="footer-content">© 2020 Mobirise
+        <br>
+        All Rights Reserved
+      </h5>
+        <!-- </li> -->
+      <!-- </ul> -->
+    </div>
+    <div class="col-lg-3">
+      <h4 class="footer-heading-2">Get in touch</h4>
+        <h5 class="footer-content">Mobirise St.
+        <br>
+        10/15 Dark City,
+        <br>
+        NY, USA
+      </h5>
+      <!-- <ul> -->
+        <!-- <li class="footer-list" > -->
+          <h5 class="footer-content">info@example.com</h5>
+        <!-- </li> -->
+        <!-- <li class="footer-list"> -->
+        <h5 class="footer-content-1"> +11 (234) 567 89 99</h5>
+        <!-- </li> -->
+      <!-- </ul> -->
+    </div>
+    <div class="col-lg-3">
+      <h4 class="footer-heading-2">Learn More</h4>
+      <!-- <ul> -->
+        <!-- <li class="footer-list"> -->
+        <h5 class="footer-content-2">About Us</h5>
+        <!-- </li> -->
+        <!-- <li class="footer-list"> -->
+          <h5 class="footer-content-2">Our Story</h5>
+        <!-- </li> -->
+        <!-- <li class="footer-list"> -->
+        <h5 class="footer-content-2">Projects</h5>
+        <!-- </li> -->
+        <!-- <li class="footer-list"> -->
+        <h5 class="footer-content-2">Terms of Use</h5>
+        <!-- </li> -->
+        <!-- <li class="footer-list"> -->
+        <h5 class="footer-content-2"> Privacy Policy</h5>
+        <!-- </li> -->
+        <!-- <li class="footer-list"> -->
+        <h5 class="footer-content-2"> Contact Us</h5>
+        <!-- </li> -->
+      <!-- </ul> -->
+    </div>
+    <div class="col-lg-3">
+      <h4 class="footer-heading-2">Our Newsletter</h4>
+      <h5 class="footer-content">Subscribe to our newsletter to get our news & deals delivered to your inbox!</h5>
+      <div class="row">
+      <div class="col-lg-6">
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control footer-form" id="exampleFormControlInput1" placeholder="E-mail*">
+          </div>
+        </form>
+        </div>
+        <div class="col-lg-6">
+          <button type="button" class="btn btn-light footer-button">JOIN</button>
+  </div>
+</div>
+    </div>
+  </div>
+  </div>
+  <p class="footer-para">© 2020 Mobirise. All rights reserved.</p>
+</section>
+  </body>
+</html>
